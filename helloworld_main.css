@@ -10,6 +10,21 @@ html, body { /* mehrere Selektoren - nötig für manche telefone */
 }
 
 
+@font-face {
+font-family: "Maybe";
+src: url("media/Maybe Maybe Not.ttf");
+}
+
+
+h1 {
+font-family: 'Maybe';
+font-size: 5vh;
+}
+
+h2 {
+font-family: 'Maybe';
+font-size: 2vh;
+}
 
 
 body {
@@ -66,8 +81,7 @@ button {
 
 .box_menu {
     position: absolute;
-    left: calc(100vw/8*7);
-    top: 0;
+    right: 0;
 }
 
 .box_info {
@@ -79,9 +93,13 @@ button {
 
 
 .box_titel {
-    position: relative;
+    position: absolute;
     left: calc(100vw/8*1);
+    top: 0;
 }
+
+
+/* Antwort Boxes
 
 .box_rep1 {
     position: relative;
@@ -96,6 +114,8 @@ button {
     top:  12vh;
 }
 
+*/
+
 
 .box_navi {
     position: absolute;
@@ -108,7 +128,7 @@ button {
 .box_spain {
 	position: absolute;
 	left: 0;
-	top: 20vh;
+	top: calc(100vh/5*1);
 	z-index: 10;
 }
 
