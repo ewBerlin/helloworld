@@ -1,0 +1,121 @@
+/* globals */
+
+
+html, body { /* mehrere Selektoren - nötig für manche telefone */
+    
+    height: 100%;
+    width: 100%;
+    color: white;
+    margin: 0;
+}
+
+
+
+
+body {
+    background-color: #33ccff;
+    background-image: url(media/bg_blue.jpg);
+    background-size: 100% auto; /*volle breite, automatische höhe */
+    background-repeat: repeat;
+}
+
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    background-color: blue;
+    border-radius: 2vw;
+    
+}
+
+
+/* EO globals */
+
+.row1 {height: calc(100vh/5*1);}
+.row2 {height: calc(100vh/5*2);}
+.row3 {height: calc(100vh/5*3);}
+.row4 {height: calc(100vh/5*4);}
+.row5 {height: calc(100vh/5*5);}
+
+
+
+.col1 {width: calc(100vw/8*1);}
+.col2 {width: calc(100vw/8*2);}
+.col3 {width: calc(100vw/8*3);}
+.col4 {width: calc(100vw/8*4);}
+.col5 {width: calc(100vw/8*5);}
+.col6 {width: calc(100vw/8*6);}
+.col7 {width: calc(100vw/8*7);}
+.col8 {width: calc(100vw/8*8);}
+
+
+
+/* colors */
+
+.color1 {background-color: #33ccff;} /* blau */
+.color2 {background-color: #ff9900;} /* orange */
+.color3 {background-color: #66cc00;} /* grün */
+.color4 {background-color: red;} /* rot */
+
+
+
+/* boxes */
+
+
+
+.box_menu {
+    position: absolute;
+    left: calc(100vw/8*7);
+    top: 0;
+}
+
+.box_info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}  
+    
+
+
+.box_titel {
+    position: relative;
+    left: calc(100vw/8*1);
+}
+
+.box_rep1 {
+    position: relative;
+    left: calc(100vw/8*3);
+    top:  10vh;
+}
+
+
+.box_rep2 {
+    position: relative;
+    left: calc(100vw/8*3);
+    top:  12vh;
+}
+
+
+.box_navi {
+    position: absolute;
+    left: calc(100vw/8*4);
+    bottom: 0;
+}
+
+
+
+.box_spain {
+	position: absolute;
+	left: 0;
+	top: 20vh;
+	z-index: 10;
+}
+
+
+.box_map {
+	position: absolute;
+	left: calc(100vw/8*1);
+	top: calc(100vh/5*1);
+}
+
