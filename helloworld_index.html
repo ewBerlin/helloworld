@@ -5,10 +5,62 @@
         <meta charset="utf-8">
         <title>What is the EU? - Hello World</title>
         <link rel="stylesheet" href="helloworld_main.css">
+        
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        
+        
+         <script>
+                  $( function() {
+                    var $start_counter = $( "#event-start" ),
+                      $drag_counter = $( "#event-drag" ),
+                      $stop_counter = $( "#event-stop" ),
+                      counts = [ 0, 0, 0 ];
+
+                    $( "#dragger" ).draggable({
+                      start: function() {
+                        
+                        counts[ 0 ]++;
+                        updateCounterStatus( $start_counter, counts[ 0 ] );
+                      },
+                      drag: function() {
+                        counts[ 1 ]++;
+                        updateCounterStatus( $drag_counter, counts[ 1 ] );
+                      },
+                      stop: function() {
+                        
+                          // your code here.... für prüfen ob richtig?
+                        console.log('losgelassen');
+                        
+                          
+                        $(this).remove();  // entfernt das draggende Elemente
+                        $('#esp').removeClass('st0').addClass('st1');
+                          
+                          
+                        counts[ 2 ]++;
+                        updateCounterStatus( $stop_counter, counts[ 2 ] );
+                      }
+                    });
+
+                    function updateCounterStatus( $event_counter, new_count ) {
+                      // first update the status visually...
+                      if ( !$event_counter.hasClass( "ui-state-hover" ) ) {
+                        $event_counter.addClass( "ui-state-hover" )
+                          .siblings().removeClass( "ui-state-hover" );
+                      }
+                      // ...then update the numbers
+                      $( "span.count", $event_counter ).text( new_count );
+                    }
+                  } );
+        </script>
+        
+        
+        
     </head>
     <body>
         
-        <!-- https://www.w3schools.com/ -->
     
        
       
@@ -65,7 +117,7 @@
 		<section class="row1 col1 color2 box_spain">
 			
 			
-   	    <svg version="1.0" id="European_Unione" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0"
+   	    <svg version="1.0" id="dragger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0"
 	 y="0" width="12vw" height="20vh" viewBox="0 0 81.6 70.7"  xml:space="preserve">
 <style type="text/css">
 	.st_spain{fill-rule:evenodd;clip-rule:evenodd;fill:#A91F23;}
@@ -148,7 +200,7 @@
 	c0.1,0.3,0,0.7-0.1,1.1c-0.1,0.7-1,1.3-1,1.8c0,0.2,0.3,0.4,0.3,0.6c0.1,0.4-0.5,1.1-0.2,1.2c0.1,0,0.5-0.2,0.4-0.1
 	c-0.1,0.2-0.4,0.1-0.5,0.2c-0.3,0.5-0.1,1.2-0.4,1.7c-0.2,0.4-1.5,2.2-1.4,2.7c0.1,0.2,0.4-0.2,0.6-0.2c0.3-0.1,0.6,0.1,1,0
 	c0.2,0,0.3-0.2,0.5-0.1c0.8,0.2,3.6,2,4,2c0.2,0,1.8-0.8,1.9-0.8C12,223.9,12.3,223.9,12.5,223.9z"/>
-<path id="ESP" class="st0" d="M66.7,196.4c0.4,0.2,0.8,0.3,1.1,0.5c0.1,0.1,0.2,0.7,0.5,0.6c0.4-0.1,0.8-0.3,1.3-0.3
+<path id="esp" class="st0" d="M66.7,196.4c0.4,0.2,0.8,0.3,1.1,0.5c0.1,0.1,0.2,0.7,0.5,0.6c0.4-0.1,0.8-0.3,1.3-0.3
 	c0.5,0,1.4,1.1,2,0.9c0.2-0.1,0-0.5,0.2-0.6c0.8-0.5,1.7-0.1,2.6,0.2h0.2c0.3,0.3,0.5,0.5,0.4,0.8c-0.1,0.4-0.8,0.3-1.1,0.6
 	c-0.2,0.2,0.6,1.4,0.1,2.3c-0.3,0.6-2.5,1.5-3.2,1.7c-0.6,0.2-1.5,0.4-1.9,0.8c-0.3,0.2-0.8,1-1.3,1.1c-1.8,0.5-5,0.2-6.4,1.3
 	c-0.4,0.3-1.1,0.6-1,1.1c0.2,0.4,1,0.3,0.9,0.7c0,0.2-1.6,0.5-1.7,0.6c-0.6,0.5-0.8,1.4-1.4,1.9c-1.5,1.5-3.4,3-4.4,5
