@@ -11,19 +11,43 @@ html, body { /* mehrere Selektoren - nötig für manche telefone */
 
 
 @font-face {
-font-family: "Maybe";
-src: url("media/Maybe Maybe Not.ttf");
+    font-family: "Maybe";
+    src: url("media/Maybe Maybe Not.ttf");
 }
+
+@font-face {
+    font-family: "OJ";
+    src: url("media/orange juice 2.0.ttf");
+}
+
+
 
 
 h1 {
-font-family: 'Maybe';
-font-size: 5vh;
+    font-family: 'Maybe';
+    font-size: 4vh;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
+
 h2 {
-font-family: 'Maybe';
-font-size: 2vh;
+    font-family: 'Maybe';
+    font-size: 2vh;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-family: 'OJ';
+    font-size: 8vh;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Arial Black';
+    font-size: 6vh;
+    text-align: center;
 }
 
 
@@ -119,7 +143,7 @@ button {
 
 .box_navi {
     position: absolute;
-    left: calc(100vw/8*4);
+    left: calc(100vw/8*6);
     bottom: 0;
 }
 
@@ -138,4 +162,40 @@ button {
 	left: calc(100vw/8*1);
 	top: calc(100vh/5*1);
 }
+
+
+
+/* SVGs */
+
+.st_spain{
+    fill:#A91F23;
+    width="calc(100vw/8*1)";
+    height="calc(100vh/5*1)";
+}
+
+.st0{
+    fill:#999999;
+    width="75vw";
+    height="60vh";
+}
+
+.st1{
+    fill:#A91F23;
+    width="75vw";
+    height="60vh";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
